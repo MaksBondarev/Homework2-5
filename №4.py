@@ -1,9 +1,9 @@
 # Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
 # Входные и выходные данные хранятся в отдельных текстовых файлах.
 
-with open('TELE.tet', 'w', encoding='UTF-8') as file:
+with open('TELE.txt', 'w', encoding='UTF-8') as file:
     file.write(input('Напишите текст необходимый для сжатия: '))
-with open('TELE.tet', 'r') as file:
+with open('TELE.txt', 'r') as file:
     text = file.readline()
     text_compression = text.split()
 
@@ -23,13 +23,13 @@ else:
     
 print(text)
 print(enconding)
-with open('TIL.tet', 'w', encoding='UTF-8') as file:
+with open('TIL.txt', 'w', encoding='UTF-8') as file:
     file.write(f'{enconding}')
 
 
 input('Для востонавления текста нажмите Enter')
 
-with open('TIL.tet', 'r', encoding='utf_8') as file:
+with open('TIL.txt', 'r', encoding='utf_8') as file:
     text = file.read()
 
 number = ''
@@ -43,5 +43,5 @@ for i in text:
 
 print(f'Востановленный текст представляет последовательность:\n{text_return}')
 
-with open('TELE.tet', 'w', encoding='utf_8') as file:
+with open('TELE.txt', 'w', encoding='utf_8') as file:
     file.write(text_return)
